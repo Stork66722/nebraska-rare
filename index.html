@@ -96,201 +96,172 @@
             padding-bottom: 2px;
         }
 
-        /* Hero Section */
-        .hero {
+        /* Hero Section with Rotating Photos */
+        .hero-photos {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            background: var(--background-light);
+        }
+
+        .hero-photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-photo.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-photo .placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+            color: var(--text-medium);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* Carousel Navigation Dots */
+        .carousel-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        .carousel-dot:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Mission Section */
+        .mission-section {
             background: linear-gradient(135deg, var(--primary-navy) 0%, #003d6b 100%);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
         }
 
-        .hero .container {
+        .mission-section .container {
             max-width: 900px;
             margin: 0 auto;
         }
 
-        .hero h1 {
+        .mission-section h1 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             color: white;
         }
 
-        .hero p {
+        .mission-section p {
             font-size: 1.2rem;
             line-height: 1.8;
             opacity: 0.95;
         }
 
+        /* Three Pillars Section */
+        .pillars-section {
+            padding: 5rem 2rem;
+            background: var(--background);
+        }
+
+        .pillars-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pillars-section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: var(--primary-navy);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .pillar-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 39, 67, 0.15);
+            border-color: var(--primary-red);
+        }
+
+        .pillar-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .pillar-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-red);
+        }
+
+        .pillar-card p {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
         /* Main Content */
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
         section {
             padding: 4rem 0;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-navy);
-            text-align: center;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-medium);
-            text-align: center;
-            margin-bottom: 3rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Mission Section */
-        .mission-content {
-            background: var(--background-light);
-            padding: 3rem;
-            border-radius: 12px;
-            border-left: 5px solid var(--primary-red);
-        }
-
-        .mission-content p {
-            font-size: 1.2rem;
-            line-height: 1.9;
-            color: var(--text-dark);
-        }
-
-        /* Board Section */
-        .board-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .board-member {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid var(--border);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .board-member:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 39, 67, 0.1);
-            border-color: var(--primary-red);
-        }
-
-        .board-member .icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-navy), var(--primary-red));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        .board-member h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-navy);
-        }
-
-        .board-member .title {
-            color: var(--primary-red);
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .board-member p {
-            color: var(--text-medium);
-            line-height: 1.6;
-        }
-
-        /* Contact Form */
-        .contact-intro {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .contact-intro p {
-            font-size: 1.1rem;
-            color: var(--text-medium);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--background-light);
-            padding: 3rem;
-            border-radius: 12px;
-            border: 2px solid var(--border);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--primary-navy);
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 0.9rem;
-            border: 2px solid var(--border);
-            border-radius: 6px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        input:focus,
-        textarea:focus {
-            outline: none;
-            border-color: var(--primary-red);
-        }
-
-        textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        button[type="submit"] {
-            background: var(--primary-red);
-            color: white;
-            padding: 1rem 3rem;
-            border: none;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-        button[type="submit"]:hover {
-            background: #8B0F11;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(178, 18, 20, 0.3);
         }
 
         /* Footer */
@@ -304,19 +275,31 @@
         footer .container {
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
+        }
+
+        footer .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
         }
 
         footer .logo-footer {
             margin-bottom: 1.5rem;
         }
 
-       footer .logo-footer img {
+        footer .logo-footer img {
             height: 150px;
             width: auto;
             background: white;
             padding: 0.5rem;
             border-radius: 8px;
+        }
+
+        footer h4 {
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
 
         footer p {
@@ -325,25 +308,39 @@
             margin-bottom: 1rem;
         }
 
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 0.75rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        footer .contact-info {
+            margin-top: 1rem;
+        }
+
+        footer .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
         footer .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.2);
             margin-top: 2rem;
             padding-top: 2rem;
+            text-align: center;
             font-size: 0.9rem;
             opacity: 0.7;
-        }
-
-        /* Utility Classes */
-        .text-center {
-            text-align: center;
-        }
-
-        .mt-2 {
-            margin-top: 2rem;
-        }
-
-        .mb-2 {
-            margin-bottom: 2rem;
         }
 
         /* Mobile Menu Toggle */
@@ -357,6 +354,21 @@
         }
 
         /* Responsive */
+        @media (max-width: 968px) {
+            .pillars-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-photos {
+                height: 400px;
+            }
+
+            footer .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             nav ul {
                 display: none;
@@ -379,50 +391,33 @@
                 gap: 1rem;
             }
 
-            .hero h1 {
+            .mission-section h1 {
                 font-size: 2rem;
             }
 
-            .hero p {
+            .mission-section p {
                 font-size: 1.1rem;
-            }
-
-            .board-grid {
-                grid-template-columns: 1fr;
             }
 
             nav .logo-section img {
                 height: 80px;
             }
 
-            form {
-                padding: 2rem 1.5rem;
+            .pillars-section h2 {
+                font-size: 1.8rem;
             }
-        }
 
-        /* Page-specific styles */
-        body.home-page .hero {
-            padding: 5rem 2rem;
-        }
+            .pillar-icon {
+                font-size: 3rem;
+            }
 
-        /* Success message after form submission */
-        .success-message {
-            background: #d4edda;
-            border: 2px solid #28a745;
-            color: #155724;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            text-align: center;
-            display: none;
-        }
-
-        .success-message.show {
-            display: block;
+            .hero-photos {
+                height: 350px;
+            }
         }
     </style>
 </head>
-<body class="home-page">
+<body>
     <nav>
         <div class="container">
             <div class="logo-section">
@@ -430,39 +425,105 @@
             </div>
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
             <ul id="nav-menu">
-                <li><a href="index.html" class="active">Mission</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="who-we-are.html">Who We Are</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="hero">
+    <!-- Hero Section with Rotating Family Photos -->
+    <div class="hero-photos">
+        <div class="hero-photo active">
+            <div class="placeholder">Family Photo 1<br><small style="font-size: 0.9rem; opacity: 0.7;">(Add hero-family-1.jpg)</small></div>
+            <!-- <img src="hero-family-1.jpg" alt="Nebraska RARE Family"> -->
+        </div>
+        <div class="hero-photo">
+            <div class="placeholder">Family Photo 2<br><small style="font-size: 0.9rem; opacity: 0.7;">(Add hero-family-2.jpg)</small></div>
+            <!-- <img src="hero-family-2.jpg" alt="Nebraska RARE Family"> -->
+        </div>
+        <div class="hero-photo">
+            <div class="placeholder">Family Photo 3<br><small style="font-size: 0.9rem; opacity: 0.7;">(Add hero-family-3.jpg)</small></div>
+            <!-- <img src="hero-family-3.jpg" alt="Nebraska RARE Family"> -->
+        </div>
+        
+        <!-- Carousel Navigation Dots -->
+        <div class="carousel-dots">
+            <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+            <span class="carousel-dot" onclick="goToSlide(1)"></span>
+            <span class="carousel-dot" onclick="goToSlide(2)"></span>
+        </div>
+    </div>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
         <div class="container">
-            <h1>Empowering Families Affected by Rare Diseases</h1>
-            <p>Nebraska RARE is dedicated to building a compassionate network through education, advocacy, and community inclusion. Together, we ensure every person with a rare condition is understood, supported, and valued.</p>
+            <h1>Our Mission</h1>
+            <p>Nebraska RARE is dedicated to empowering families impacted by rare diseases through education, advocacy, and community inclusion. We strive to elevate awareness and partner with healthcare providers and communities to ensure every child and adult with a rare condition is understood, supported, and valued. Together, we build a compassionate network where all families feel seen, heard, and never alone.</p>
         </div>
     </section>
 
-    <section>
+    <!-- Three Pillars Section -->
+    <section class="pillars-section">
         <div class="container">
-            <h2 class="section-title">Our Mission</h2>
-            <p class="section-subtitle">What drives everything we do</p>
-            
-            <div class="mission-content">
-                <p>Nebraska RARE is dedicated to empowering families impacted by rare diseases through education, advocacy, and community inclusion. We strive to elevate awareness and partner with healthcare providers and communities to ensure every child and adult with a rare condition is understood, supported, and valued.</p>
-                <p class="mt-2">Together, we build a compassionate network where all families feel seen, heard, and never alone.</p>
+            <h2>How We Serve Nebraska Families</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <span class="pillar-icon">🏛️</span>
+                    <h3>Advocacy</h3>
+                    <p>We amplify the voices of rare disease families in Nebraska's legislature and healthcare system, working to improve policies, access to care, and support systems across our state.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <span class="pillar-icon">📚</span>
+                    <h3>Education</h3>
+                    <p>We provide resources, training, and information to families, healthcare providers, educators, and communities to increase understanding of rare diseases and their impact.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <span class="pillar-icon">🤝</span>
+                    <h3>Community Inclusion</h3>
+                    <p>We foster connections among families, build supportive networks, and ensure that every person with a rare condition is welcomed and valued in their community.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="logo-footer">
-                <img src="logo.png" alt="Nebraska RARE Logo">
+            <div class="footer-content">
+                <div>
+                    <div class="logo-footer">
+                        <img src="logo.png" alt="Nebraska RARE Logo">
+                    </div>
+                    <p>Empowering families impacted by rare diseases through education, advocacy, and community inclusion.</p>
+                </div>
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="who-we-are.html">Who We Are</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong><br>
+                        <a href="mailto:info@nebraska-rare.org">info@nebraska-rare.org</a></p>
+                        <p><strong>Phone:</strong><br>
+                        (Coming Soon)</p>
+                    </div>
+                </div>
             </div>
-            <p>Empowering families impacted by rare diseases through education, advocacy, and community inclusion.</p>
-            <p><strong>Contact:</strong> info@nebraska-rare.org</p>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Nebraska RARE. Working toward 501(c)(3) nonprofit status.</p>
             </div>
@@ -474,6 +535,54 @@
             const menu = document.getElementById('nav-menu');
             menu.classList.toggle('mobile-open');
         }
+
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-photo');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const totalSlides = slides.length;
+        let autoRotateInterval;
+
+        function showSlide(index) {
+            // Remove active class from all slides and dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Add active class to current slide and dot
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            let next = (currentSlide + 1) % totalSlides;
+            showSlide(next);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            // Reset auto-rotation when user manually clicks
+            clearInterval(autoRotateInterval);
+            startAutoRotate();
+        }
+
+        function startAutoRotate() {
+            autoRotateInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        }
+
+        // Start auto-rotation when page loads
+        startAutoRotate();
+
+        // Pause auto-rotation when user hovers over carousel
+        const heroSection = document.querySelector('.hero-photos');
+        heroSection.addEventListener('mouseenter', () => {
+            clearInterval(autoRotateInterval);
+        });
+
+        heroSection.addEventListener('mouseleave', () => {
+            startAutoRotate();
+        });
     </script>
 </body>
 </html>

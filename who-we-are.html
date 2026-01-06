@@ -187,11 +187,13 @@
         footer .container {
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
         }
 
-        footer .logo-footer {
-            margin-bottom: 1.5rem;
+        footer .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
         }
 
         footer .logo-footer img {
@@ -200,6 +202,12 @@
             background: white;
             padding: 0.5rem;
             border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        footer h4 {
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
         }
 
         footer p {
@@ -208,10 +216,29 @@
             margin-bottom: 1rem;
         }
 
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 0.75rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
         footer .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.2);
             margin-top: 2rem;
             padding-top: 2rem;
+            text-align: center;
             font-size: 0.9rem;
             opacity: 0.7;
         }
@@ -223,6 +250,12 @@
             font-size: 1.5rem;
             color: var(--primary-navy);
             cursor: pointer;
+        }
+
+        @media (max-width: 968px) {
+            footer .footer-content {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -269,8 +302,10 @@
             </div>
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
             <ul id="nav-menu">
-                <li><a href="index.html">Mission</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="who-we-are.html" class="active">Who We Are</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -293,7 +328,7 @@
 
                 <div class="board-member">
                     <div class="icon">SS</div>
-                    <h3>Susan Samuleson</h3>
+                    <h3>Susan Samuelson</h3>
                     <div class="title">Vice President</div>
                     <p>Supporting advocacy efforts and community engagement initiatives.</p>
                 </div>
@@ -310,11 +345,32 @@
 
     <footer>
         <div class="container">
-            <div class="logo-footer">
-                <img src="logo.png" alt="Nebraska RARE Logo">
+            <div class="footer-content">
+                <div>
+                    <img src="logo.png" alt="Nebraska RARE Logo" class="logo-footer">
+                    <p>Empowering families impacted by rare diseases through education, advocacy, and community inclusion.</p>
+                </div>
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="who-we-are.html">Who We Are</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact Us</h4>
+                    <p><strong>Email:</strong><br>
+                    <a href="mailto:info@nebraska-rare.org">info@nebraska-rare.org</a></p>
+                    <p><strong>Phone:</strong><br>
+                    (Coming Soon)</p>
+                </div>
             </div>
-            <p>Empowering families impacted by rare diseases through education, advocacy, and community inclusion.</p>
-            <p><strong>Contact:</strong> info@nebraska-rare.org</p>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Nebraska RARE. Working toward 501(c)(3) nonprofit status.</p>
             </div>

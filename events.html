@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Nebraska RARE</title>
-    <meta name="description" content="Get in touch with Nebraska RARE. We're here to support families affected by rare diseases across Nebraska.">
+    <title>Events - Nebraska RARE</title>
+    <meta name="description" content="Upcoming events, advocacy activities, and community gatherings for Nebraska RARE.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -123,121 +123,88 @@
             padding: 4rem 0;
         }
 
-        .contact-intro {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .contact-intro p {
-            font-size: 1.1rem;
-            color: var(--text-medium);
-            max-width: 600px;
-            margin: 0 auto 1.5rem;
-        }
-
-        .contact-info {
-            background: var(--background-light);
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .contact-info p {
-            font-size: 1rem;
-            color: var(--text-dark);
-            margin: 0.5rem 0;
-        }
-
-        .contact-info a {
-            color: var(--primary-red);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--background-light);
-            padding: 3rem;
-            border-radius: 12px;
+        .event-card {
+            background: white;
             border: 2px solid var(--border);
+            border-left: 5px solid var(--primary-red);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
+        .event-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 39, 67, 0.1);
+            transform: translateY(-3px);
         }
 
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
+        .event-date {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
             font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .event-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
             color: var(--primary-navy);
         }
 
-        label .required {
-            color: var(--primary-red);
+        .event-details {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
         }
 
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 0.9rem;
-            border: 2px solid var(--border);
-            border-radius: 6px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
+        .event-detail {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-medium);
         }
 
-        input:focus,
-        textarea:focus {
-            outline: none;
-            border-color: var(--primary-red);
+        .event-detail strong {
+            color: var(--primary-navy);
         }
 
-        textarea {
-            min-height: 150px;
-            resize: vertical;
+        .event-card p {
+            color: var(--text-medium);
+            line-height: 1.7;
+            margin-bottom: 1rem;
         }
 
-        button[type="submit"] {
+        .event-link {
+            display: inline-block;
             background: var(--primary-red);
             color: white;
-            padding: 1rem 3rem;
-            border: none;
+            padding: 0.75rem 1.5rem;
             border-radius: 6px;
-            font-size: 1.1rem;
+            text-decoration: none;
             font-weight: 600;
-            cursor: pointer;
             transition: all 0.3s ease;
-            width: 100%;
         }
 
-        button[type="submit"]:hover {
+        .event-link:hover {
             background: #8B0F11;
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(178, 18, 20, 0.3);
         }
 
-        .success-message {
-            background: #d4edda;
-            border: 2px solid #28a745;
-            color: #155724;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
+        .no-events {
             text-align: center;
-            display: none;
+            padding: 4rem 2rem;
+            background: var(--background-light);
+            border-radius: 12px;
         }
 
-        .success-message.show {
-            display: block;
+        .no-events p {
+            font-size: 1.1rem;
+            color: var(--text-medium);
         }
 
         footer {
@@ -347,12 +314,13 @@
                 font-size: 2rem;
             }
 
-            form {
-                padding: 2rem 1.5rem;
-            }
-
             nav .logo-section img {
                 height: 80px;
+            }
+
+            .event-details {
+                flex-direction: column;
+                gap: 0.5rem;
             }
         }
     </style>
@@ -367,61 +335,47 @@
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="who-we-are.html">Who We Are</a></li>
-                <li><a href="events.html">Events</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
                 <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="page-header">
-        <h1>Contact Us</h1>
-        <p>We're here to support you. Reach out anytime.</p>
+        <h1>Events</h1>
+        <p>Join us for advocacy, education, and community gatherings</p>
     </div>
 
     <section>
         <div class="container">
-            <div class="contact-intro">
-                <p>Whether you're seeking resources, want to get involved, or have questions about rare diseases in Nebraska, we'd love to hear from you.</p>
-                
-                <div class="contact-info">
-                    <p><strong>Email:</strong> <a href="mailto:info@nebraska-rare.org">info@nebraska-rare.org</a></p>
-                    <p><strong>Phone:</strong> Coming Soon</p>
+            <!-- Sample Event - Press Conference -->
+            <div class="event-card">
+                <div class="event-date">📅 Coming Soon</div>
+                <h3>Nebraska RARE Press Conference</h3>
+                <div class="event-details">
+                    <div class="event-detail">
+                        <strong>Date:</strong> TBD
+                    </div>
+                    <div class="event-detail">
+                        <strong>Time:</strong> TBD
+                    </div>
+                    <div class="event-detail">
+                        <strong>Location:</strong> Nebraska State Capitol
+                    </div>
                 </div>
+                <p>Join us for the official announcement of Nebraska RARE and our advocacy efforts to establish a Rare Disease Advisory Council in Nebraska. We'll be sharing stories from Nebraska families and outlining our mission to support the rare disease community across our state.</p>
+                <p><strong>More details coming soon!</strong></p>
             </div>
 
-            <div class="success-message" id="successMessage">
-                <strong>Thank you for reaching out!</strong><br>
-                We've received your message and will get back to you soon.
+            <!-- Add more events here as they're scheduled -->
+            
+            <!-- Placeholder for future events -->
+            <div style="background: var(--background-light); padding: 2rem; border-radius: 8px; text-align: center; margin-top: 2rem;">
+                <p style="color: var(--text-medium); margin: 0;">
+                    <strong>Stay Connected:</strong> More events will be announced soon. Subscribe to our updates by <a href="contact.html" style="color: var(--primary-red); text-decoration: none; font-weight: 600;">contacting us</a> to join our mailing list.
+                </p>
             </div>
-
-            <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <div class="form-group">
-                    <label for="name">Name <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message <span class="required">*</span></label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-
-                <button type="submit">Send Message</button>
-            </form>
-
-            <p style="text-align: center; color: var(--text-medium); margin-top: 2rem; font-size: 0.9rem;">
-                <em>Note: To activate the contact form, you'll need to set up a free Formspree account and replace "YOUR_FORM_ID" in the form action.</em>
-            </p>
         </div>
     </section>
 
@@ -464,33 +418,6 @@
             const menu = document.getElementById('nav-menu');
             menu.classList.toggle('mobile-open');
         }
-
-        // Form submission handling
-        const form = document.getElementById('contactForm');
-        const successMessage = document.getElementById('successMessage');
-
-        form.addEventListener('submit', function(e) {
-            // When using Formspree, this will handle the submission
-            // Uncomment these lines after setting up Formspree:
-            /*
-            e.preventDefault();
-            const formData = new FormData(form);
-            
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    successMessage.classList.add('show');
-                    form.reset();
-                    window.scrollTo(0, 0);
-                }
-            });
-            */
-        });
     </script>
 </body>
 </html>

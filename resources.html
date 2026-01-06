@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Nebraska RARE</title>
+    <meta name="description" content="Healthcare resources, support organizations, and information for Nebraska families affected by rare diseases.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #002743;
+            --primary-red: #B21214;
+            --accent-gold: #D4A556;
+            --text-dark: #1A1A1A;
+            --text-medium: #4A4A4A;
+            --background: #FFFFFF;
+            --background-light: #F8F8F8;
+            --border: #E0E0E0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', -apple-system, sans-serif;
+            background: var(--background);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Lora', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--primary-navy);
+        }
+
+        nav {
+            background: white;
+            border-bottom: 3px solid var(--primary-red);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        nav .logo-section img {
+            height: 100px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-navy);
+            font-weight: 600;
+            transition: color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: var(--primary-red);
+        }
+
+        nav a.active {
+            color: var(--primary-red);
+            border-bottom: 2px solid var(--primary-red);
+            padding-bottom: 2px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #003d6b 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        .resource-category {
+            margin-bottom: 4rem;
+        }
+
+        .resource-category h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-navy);
+            border-bottom: 3px solid var(--primary-red);
+            padding-bottom: 0.5rem;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            border-color: var(--primary-red);
+            box-shadow: 0 8px 20px rgba(0, 39, 67, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .resource-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-red);
+        }
+
+        .resource-card p {
+            color: var(--text-medium);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .resource-card a {
+            display: inline-block;
+            color: var(--primary-navy);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .resource-card a:hover {
+            color: var(--primary-red);
+        }
+
+        .resource-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        footer {
+            background: var(--primary-navy);
+            color: white;
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        footer .logo-footer img {
+            height: 150px;
+            width: auto;
+            background: white;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        footer h4 {
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            opacity: 0.9;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 0.75rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        footer .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 2rem;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-navy);
+            cursor: pointer;
+        }
+
+        @media (max-width: 968px) {
+            footer .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            nav ul.mobile-open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                gap: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            nav .logo-section img {
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo-section">
+                <img src="logo.png" alt="Nebraska RARE Logo">
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="who-we-are.html">Who We Are</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Resources</h1>
+        <p>Support, information, and connections for Nebraska families</p>
+    </div>
+
+    <section>
+        <div class="container">
+            <!-- Nebraska Healthcare Resources -->
+            <div class="resource-category">
+                <h2>🏥 Nebraska Healthcare Resources</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <span class="resource-icon">🧬</span>
+                        <h3>Boys Town Neurogenetics</h3>
+                        <p>Comprehensive neurogenetics and rare disease clinic providing specialized care for children with genetic conditions.</p>
+                        <a href="https://www.boystownhospital.org" target="_blank" rel="noopener">Visit Website →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <span class="resource-icon">🏥</span>
+                        <h3>UNMC Genetics</h3>
+                        <p>University of Nebraska Medical Center offers genetic testing, counseling, and specialized care for rare diseases.</p>
+                        <a href="https://www.unmc.edu" target="_blank" rel="noopener">Visit Website →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <span class="resource-icon">👶</span>
+                        <h3>Children's Hospital & Medical Center</h3>
+                        <p>Leading pediatric hospital in Nebraska with specialty care for complex medical conditions.</p>
+                        <a href="https://www.childrensomaha.org" target="_blank" rel="noopener">Visit Website →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partner Organizations -->
+            <div class="resource-category">
+                <h2>🤝 Partner Organizations</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <span class="resource-icon">♿</span>
+                        <h3>The Arc Nebraska</h3>
+                        <p>Advocacy organization supporting people with intellectual and developmental disabilities and their families.</p>
+                        <a href="https://www.arc-nebraska.org" target="_blank" rel="noopener">Visit Website →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <span class="resource-icon">🧩</span>
+                        <h3>Munroe-Meyer Institute (MMI)</h3>
+                        <p>Research and clinical services for developmental disabilities, including autism and genetic conditions.</p>
+                        <a href="https://www.unmc.edu/mmi" target="_blank" rel="noopener">Visit Website →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <span class="resource-icon">👨‍👩‍👧‍👦</span>
+                        <h3>PTI Nebraska</h3>
+                        <p>Parent Training and Information center providing support and resources for families of children with disabilities.</p>
+                        <a href="https://www.pti-nebraska.org" target="_blank" rel="noopener">Visit Website →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <span class="resource-icon">🏛️</span>
+                        <h3>DD Council Nebraska</h3>
+                        <p>Developmental Disabilities Council advocating for policy and systems change in Nebraska.</p>
+                        <a href="https://dhhs.ne.gov/DD%20Council" target="_blank" rel="noopener">Visit Website →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- National Resources -->
+            <div class="resource-category">
+                <h2>🌎 National Rare Disease Resources</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <span class="resource-icon">🔬</span>
+                        <h3>NORD (National Organization for Rare Disorders)</h3>
+                        <p>Leading advocacy organization providing resources, support, and information for the rare disease community.</p>
+                        <a href="https://rarediseases.org" target="_blank" rel="noopener">Visit Website →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <span class="resource-icon">📚</span>
+                        <h3>Genetic and Rare Diseases (GARD)</h3>
+                        <p>NIH information center providing reliable information about genetic and rare diseases.</p>
+                        <a href="https://rarediseases.info.nih.gov" target="_blank" rel="noopener">Visit Website →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <span class="resource-icon">💊</span>
+                        <h3>EveryLife Foundation</h3>
+                        <p>National advocacy organization working to improve healthcare policy for rare disease patients.</p>
+                        <a href="https://everylifefoundation.org" target="_blank" rel="noopener">Visit Website →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial & Support Resources -->
+            <div class="resource-category">
+                <h2>💰 Financial & Travel Support</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <span class="resource-icon">✈️</span>
+                        <h3>CHAD (Children's Hospital Aid and Diagnosis)</h3>
+                        <p>Provides travel assistance for families traveling to medical appointments in Nebraska.</p>
+                        <a href="#" onclick="alert('Contact info@nebraska-rare.org for CHAD information'); return false;">Contact Us for Info</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <span class="resource-icon">💳</span>
+                        <h3>PAN Foundation</h3>
+                        <p>Patient assistance for copays and out-of-pocket medication costs for chronic and rare diseases.</p>
+                        <a href="https://www.panfoundation.org" target="_blank" rel="noopener">Visit Website →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <span class="resource-icon">🏠</span>
+                        <h3>Ronald McDonald House</h3>
+                        <p>Housing for families with children receiving medical treatment away from home.</p>
+                        <a href="https://www.rmhc.org" target="_blank" rel="noopener">Visit Website →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact CTA -->
+            <div style="background: linear-gradient(135deg, var(--primary-navy), #003d6b); color: white; padding: 3rem; border-radius: 12px; text-align: center; margin-top: 3rem;">
+                <h2 style="color: white; margin-bottom: 1rem;">Need Help Finding Resources?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95;">We're here to help connect you with the support and information you need.</p>
+                <a href="contact.html" style="display: inline-block; background: var(--primary-red); color: white; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <img src="logo.png" alt="Nebraska RARE Logo" class="logo-footer">
+                    <p>Empowering families impacted by rare diseases through education, advocacy, and community inclusion.</p>
+                </div>
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="who-we-are.html">Who We Are</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact Us</h4>
+                    <p><strong>Email:</strong><br>
+                    <a href="mailto:info@nebraska-rare.org">info@nebraska-rare.org</a></p>
+                    <p><strong>Phone:</strong><br>
+                    (Coming Soon)</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nebraska RARE. Working toward 501(c)(3) nonprofit status.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('mobile-open');
+        }
+    </script>
+</body>
+</html>
