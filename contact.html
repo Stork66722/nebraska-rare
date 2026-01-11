@@ -210,11 +210,18 @@
             border-radius: 8px;
             margin-bottom: 2rem;
             text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
             display: none;
         }
 
         .success-message.show {
             display: block;
+            opacity: 1;
+        }
+
+        .success-message.fade-out {
+            opacity: 0;
         }
 
          /* Footer */
@@ -483,10 +490,21 @@
                     // Success!
                     successMessage.classList.add('show');
                     form.reset();
-                    window.scrollTo({top: 0, behavior: 'smooth'});
                     
+                    // Scroll to success message smoothly
+                    successMessage.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'center' 
+                    });
+                    
+                    // Fade out after 7 seconds
                     setTimeout(() => {
-                        successMessage.classList.remove('show');
+                        successMessage.classList.add('fade-out');
+                        
+                        // Remove from DOM after fade completes (0.5s transition)
+                        setTimeout(() => {
+                            successMessage.classList.remove('show', 'fade-out');
+                        }, 500);
                     }, 7000);
                 } else {
                     // Error from Formspree
