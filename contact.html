@@ -377,7 +377,7 @@
                 <p>Whether you're seeking resources, want to get involved, or have questions about rare diseases in Nebraska, we'd love to hear from you.</p>
             </div>
 
-            <div class="contact-info" style="background: var(--background-light); padding: 1.5rem; border-radius: 8px; text-align: center; margin-top: 2rem;">
+            <div class="contact-info" style="background: var(--background-light); padding: 1.5rem; border-radius: 8px; text-align: center; margin: 2rem auto 3rem auto; max-width: 600px; border: 2px solid var(--border);">
                 <p style="margin: 0.5rem 0;"><strong>Email:</strong> <a href="mailto:info@nebraska-rare.org">info@nebraska-rare.org</a></p>
                 <p style="margin: 0.5rem 0;"><strong>Phone:</strong> <a href="tel:+14029572061">(402) 957-2061</a></p>
             </div>
@@ -485,10 +485,9 @@
                     form.reset();
                     window.scrollTo({top: 0, behavior: 'smooth'});
                     
-                    // Hide success message after 5 seconds
                     setTimeout(() => {
                         successMessage.classList.remove('show');
-                    }, 5000);
+                    }, 7000);
                 } else {
                     // Error from Formspree
                     alert('Oops! There was a problem submitting your form. Please try again or email us directly at info@nebraska-rare.org');
