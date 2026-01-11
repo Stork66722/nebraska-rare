@@ -458,13 +458,19 @@
             menu.classList.toggle('mobile-open');
         }
 
-        // Form submission handling
+        // Form submission handling with AJAX
         const form = document.getElementById('contactForm');
         const successMessage = document.getElementById('successMessage');
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             const formData = new FormData(form);
+            
+            // Disable submit button during submission
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
             
             fetch(form.action, {
                 method: 'POST',
@@ -474,12 +480,27 @@
                 }
             }).then(response => {
                 if (response.ok) {
+                    // Success!
                     successMessage.classList.add('show');
                     form.reset();
-                    window.scrollTo(0, 0);
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.classList.remove('show');
+                    }, 5000);
+                } else {
+                    // Error from Formspree
+                    alert('Oops! There was a problem submitting your form. Please try again or email us directly at info@nebraska-rare.org');
                 }
+            }).catch(error => {
+                // Network error
+                alert('Oops! There was a problem submitting your form. Please try again or email us directly at info@nebraska-rare.org');
+            }).finally(() => {
+                // Re-enable submit button
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
             });
-            */
         });
     </script>
 </body>
