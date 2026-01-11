@@ -247,12 +247,14 @@
             color: white;
         }
 
-        footer .contact-info {
-            margin-top: 1rem;
+        footer .contact-info a[href^="tel:"] {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        footer .contact-info p {
-            margin-bottom: 0.5rem;
+        footer .contact-info a[href^="tel:"]:hover {
+            color: white;
         }
 
         footer .footer-bottom {
@@ -491,7 +493,7 @@
                         <p><strong>Email:</strong><br>
                         <a href="mailto:info@nebraska-rare.org">info@nebraska-rare.org</a></p>
                         <p><strong>Phone:</strong><br>
-                        (402) 957-2061</p>
+                        <a href="tel:+14029572061">(402) 957-2061</a></p>
                     </div>
                 </div>
             </div>
