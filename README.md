@@ -127,4 +127,4 @@ For suggestions or corrections, please contact us via the website contact form.
 
 ## Acknowledgments
 
-Built with care for the Nebraska rare disease community.
+Built with care for the Nebraska rare disease community. 
