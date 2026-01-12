@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who We Are - Nebraska RARE</title>
-    <meta name="description" content="Learn about Nebraska RARE's mission to empower families affected by rare diseases through education, advocacy, and community inclusion.">
+    <meta name="description" content="Meet the leadership team behind Nebraska RARE's mission to empower families affected by rare diseases.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -123,149 +123,91 @@
             padding: 4rem 0;
         }
 
-        .content-section {
+        .mission-intro {
+            text-align: center;
             margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .content-section h2 {
+        .mission-intro h2 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
             color: var(--primary-navy);
         }
 
-        .content-section p {
+        .mission-intro p {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
+            color: var(--text-medium);
         }
 
-        .mission-box {
-            background: var(--background-light);
-            padding: 3rem;
-            border-radius: 12px;
-            border-left: 5px solid var(--primary-red);
-            margin-bottom: 3rem;
-        }
-
-        .mission-box p {
-            font-size: 1.2rem;
-            line-height: 1.9;
-            color: var(--text-dark);
-        }
-
-        .values-grid {
+        .board-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
-        .value-card {
+        .board-member {
             background: white;
             padding: 2rem;
             border-radius: 12px;
             border: 2px solid var(--border);
+            text-align: center;
             transition: all 0.3s ease;
         }
 
-        .value-card:hover {
+        .board-member:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 39, 67, 0.1);
             border-color: var(--primary-red);
         }
 
-        .value-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
+        .board-member .icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-navy), var(--primary-red));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
         }
 
-        .value-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-red);
-        }
-
-        .value-card p {
-            font-size: 1rem;
-            color: var(--text-medium);
-            line-height: 1.7;
-        }
-
-        .who-we-serve {
-            background: var(--background-light);
-            padding: 3rem;
-            border-radius: 12px;
-            margin-bottom: 3rem;
-        }
-
-        .who-we-serve h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+        .board-member h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
             color: var(--primary-navy);
         }
 
-        .who-we-serve ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .who-we-serve li {
-            padding: 0.75rem 0;
-            padding-left: 2rem;
-            position: relative;
-            font-size: 1.1rem;
-            color: var(--text-dark);
-        }
-
-        .who-we-serve li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
+        .board-member .title {
             color: var(--primary-red);
-            font-weight: bold;
-            font-size: 1.3rem;
-        }
-
-        .cta-box {
-            background: linear-gradient(135deg, var(--primary-navy), #003d6b);
-            color: white;
-            padding: 3rem;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .cta-box h2 {
-            color: white;
+            font-weight: 600;
+            font-size: 1rem;
             margin-bottom: 1rem;
         }
 
-        .cta-box p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
+        .board-member p {
+            color: var(--text-medium);
+            line-height: 1.6;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: var(--primary-red);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
+        .member-photo {
+            width: 100px; 
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #D4A556; 
+            box-shadow: 0 4px 8px rgba(0, 39, 67, 0.2); 
         }
 
-        .cta-button:hover {
-            background: #8B0F11;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(178, 18, 20, 0.3);
-        }
-
-        /* Footer */
+         /* Footer */
         footer {
             background: var(--primary-navy);
             color: white;
@@ -359,10 +301,6 @@
             footer .footer-content {
                 grid-template-columns: 1fr;
             }
-
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
         @media (max-width: 768px) {
@@ -391,12 +329,12 @@
                 font-size: 2rem;
             }
 
-            nav .logo-section img {
-                height: 80px;
+            .board-grid {
+                grid-template-columns: 1fr;
             }
 
-            .mission-box, .who-we-serve, .cta-box {
-                padding: 2rem;
+            nav .logo-section img {
+                height: 80px;
             }
         }
     </style>
@@ -420,81 +358,39 @@
 
     <div class="page-header">
         <h1>Who We Are</h1>
-        <p>A voice for Nebraska families affected by rare diseases</p>
+        <p>Meet the dedicated team leading Nebraska RARE's mission</p>
     </div>
 
     <section>
         <div class="container">
-            <!-- Mission Section -->
-            <div class="content-section">
+            <div class="mission-intro">
                 <h2>Our Mission</h2>
-                <div class="mission-box">
-                    <p>Nebraska RARE is dedicated to empowering families impacted by rare diseases through education, advocacy, and community inclusion. We strive to elevate awareness, partner with healthcare providers, and communities to ensure every person with a rare condition is understood, supported, and valued. Together, we build a compassionate network where all families feel seen, heard, and never alone.</p>
-                </div>
+                <p>Nebraska RARE is dedicated to empowering families impacted by rare diseases through education, advocacy, and community inclusion. We strive to elevate awareness, partner with healthcare providers and communities to ensure every person with a rare condition is understood, supported, and valued. Together, we build a compassionate network where all families feel seen, heard, and never alone.</p>
             </div>
 
-            <!-- Who We Serve Section -->
-            <div class="content-section">
-                <h2>Who We Serve</h2>
-                <div class="who-we-serve">
-                    <p style="margin-bottom: 1.5rem;">Nebraska RARE supports individuals and families across our state who are navigating life with rare diseases:</p>
-                    <ul>
-                        <li>Children and adults living with rare conditions</li>
-                        <li>Parents and caregivers seeking resources and support</li>
-                        <li>Families in rural communities with limited access to specialized care</li>
-                        <li>Healthcare providers seeking to better serve rare disease patients</li>
-                        <li>Educators and community members working to foster inclusion</li>
-                    </ul>
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-navy);">Our Leadership Team</h2>
+
+            <div class="board-grid">
+                <div class="board-member">
+                    <img src="paige-rivard.jpg" alt="Paige Rivard" class="member-photo">
+                    <h3>Paige Rivard</h3>
+                    <div class="title">President</div>
+                    <p>Leading Nebraska RARE's vision to empower families across the state.</p>
                 </div>
-            </div>
 
-            <!-- Our Values Section -->
-            <div class="content-section">
-                <h2>Our Values</h2>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <span class="value-icon">💙</span>
-                        <h3>Compassion</h3>
-                        <p>We lead with empathy and understanding, recognizing the unique challenges each family faces on their rare disease journey.</p>
-                    </div>
-
-                    <div class="value-card">
-                        <span class="value-icon">🤝</span>
-                        <h3>Collaboration</h3>
-                        <p>We believe in the power of partnership—bringing together families, healthcare providers, policymakers, and communities.</p>
-                    </div>
-
-                    <div class="value-card">
-                        <span class="value-icon">💪</span>
-                        <h3>Empowerment</h3>
-                        <p>We equip families with knowledge, resources, and connections to advocate effectively for themselves and their loved ones.</p>
-                    </div>
-
-                    <div class="value-card">
-                        <span class="value-icon">🌟</span>
-                        <h3>Inclusion</h3>
-                        <p>We champion the full participation of all individuals with rare diseases in their communities, schools, and workplaces.</p>
-                    </div>
-
-                    <div class="value-card">
-                        <span class="value-icon">📣</span>
-                        <h3>Advocacy</h3>
-                        <p>We amplify the voices of rare disease families to drive meaningful policy change and improve access to care across Nebraska.</p>
-                    </div>
-
-                    <div class="value-card">
-                        <span class="value-icon">🌾</span>
-                        <h3>Nebraska Pride</h3>
-                        <p>We're committed to serving all corners of our state—from urban centers to rural communities—because every Nebraskan matters.</p>
-                    </div>
+                <div class="board-member">
+                    <div class="icon">SS</div>
+                    <h3>Susan Samuelson</h3>
+                    <div class="title">Vice President</div>
+                    <p>Supporting advocacy efforts and community engagement initiatives.</p>
                 </div>
-            </div>
 
-            <!-- Get Involved CTA -->
-            <div class="cta-box">
-                <h2>Join Our Movement</h2>
-                <p>Whether you're a family member, healthcare provider, or community advocate, there's a place for you in Nebraska RARE.</p>
-                <a href="contact.html" class="cta-button">Get Involved</a>
+                <div class="board-member">
+                    <div class="icon">KL</div>
+                    <h3>Kelsey Lahaie</h3>
+                    <div class="title">Secretary</div>
+                    <p>Ensuring organizational excellence and coordinating outreach efforts.</p>
+                </div>
             </div>
         </div>
     </section>
