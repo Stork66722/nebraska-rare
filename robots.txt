@@ -1,4 +1,9 @@
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
 
+# Exclude the 404 page from search results
+Disallow: /404.html
+
+# Direct search engines to the sitemap
 Sitemap: https://nebraska-rare.org/sitemap.xml
