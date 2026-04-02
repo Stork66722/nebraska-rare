@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Who We Are - Nebraska RARE Leadership Team & Mission</title>
-    <link rel="canonical" href="https://nebraska-rare.org/who-we-are.html" />
-    <meta name="description" content="Meet the leadership team behind Nebraska RARE's mission to empower families affected by rare diseases through education, advocacy, and community support across Nebraska.">
-    <meta name="keywords" content="Nebraska RARE team, rare disease advocacy leadership, Nebraska rare disease board, nonprofit leadership Nebraska">
+    <title>Kelsey Lahaie - Secretary | Nebraska RARE</title>
+    <link rel="canonical" href="https://nebraska-rare.org/kelsey-bio.html" />
+    <meta name="description" content="Meet Kelsey Lahaie, Secretary of Nebraska RARE. Dedicated to empowering families affected by rare diseases through advocacy, education, and support.">
+    <meta name="keywords" content="Kelsey Lahaie, Nebraska RARE Secretary, rare disease advocacy, Rett Syndrome">
     <meta name="author" content="Nebraska RARE">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nebraska-rare.org/who-we-are.html">
-    <meta property="og:title" content="Who We Are - Nebraska RARE Leadership Team">
-    <meta property="og:description" content="Meet our leadership team dedicated to empowering families affected by rare diseases in Nebraska">
+    <meta property="og:url" content="https://nebraska-rare.org/kelsey-bio.html">
+    <meta property="og:title" content="Kelsey Lahaie - Secretary | Nebraska RARE">
+    <meta property="og:description" content="Meet Kelsey Lahaie, dedicated to empowering families affected by rare diseases">
     <meta property="og:site_name" content="Nebraska RARE">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="https://nebraska-rare.org/who-we-are.html">
-    <meta name="twitter:title" content="Who We Are - Nebraska RARE">
-    <meta name="twitter:description" content="Meet our leadership team dedicated to rare disease advocacy">
+    <meta name="twitter:url" content="https://nebraska-rare.org/kelsey-bio.html">
+    <meta name="twitter:title" content="Kelsey Lahaie - Nebraska RARE">
+    <meta name="twitter:description" content="Secretary of Nebraska RARE">
     
     <!-- Google Analytics (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZJ1HD6PD2"></script>
@@ -142,12 +142,29 @@
         .page-header h1 {
             font-size: 2.5rem;
             color: white;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
-        .page-header p {
+        .page-header .title {
+            font-size: 1.3rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header .email {
             font-size: 1.1rem;
             opacity: 0.95;
+        }
+
+        .page-header .email a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+            transition: border-color 0.3s ease;
+        }
+
+        .page-header .email a:hover {
+            border-bottom-color: white;
         }
 
         .container {
@@ -160,91 +177,92 @@
             padding: 4rem 0;
         }
 
-        .mission-intro {
-            text-align: center;
-            margin-bottom: 4rem;
+        .bio-section {
+            background: var(--background-light);
+        }
+
+        .bio-header {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-red);
+        }
+
+        .bio-photo {
+            flex-shrink: 0;
+        }
+
+        .bio-photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--accent-gold);
+            box-shadow: 0 4px 12px rgba(0, 39, 67, 0.2);
+        }
+
+        .bio-content {
             max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
         }
 
-        .mission-intro h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-navy);
-        }
-
-        .mission-intro p {
+        .bio-content p {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--text-medium);
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
         }
 
-        .board-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+        .contact-box {
+            background: white;
+            border: 2px solid var(--primary-red);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-box a {
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-box a:hover {
+            opacity: 0.8;
+        }
+
+        .back-button {
+            text-align: center;
             margin-top: 3rem;
         }
 
-        .board-member {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid var(--border);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .board-member:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 39, 67, 0.1);
-            border-color: var(--primary-red);
-        }
-
-        .board-member .icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-navy), var(--primary-red));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
+        .back-button a {
+            display: inline-block;
+            background: var(--primary-navy);
             color: white;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        .board-member h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-navy);
-        }
-
-        .board-member .title {
-            color: var(--primary-red);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            transition: background-color 0.3s ease;
         }
 
-        .board-member p {
-            color: var(--text-medium);
-            line-height: 1.6;
+        .back-button a:hover {
+            background: var(--primary-red);
         }
 
-        .member-photo {
-            width: 100px; 
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            border: 3px solid #D4A556; 
-            box-shadow: 0 4px 8px rgba(0, 39, 67, 0.2); 
-        }
-
-         /* Footer */
+        /* Footer */
         footer {
             background: var(--primary-navy);
             color: white;
@@ -338,6 +356,12 @@
             footer .footer-content {
                 grid-template-columns: 1fr;
             }
+
+            .bio-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
         }
 
         @media (max-width: 768px) {
@@ -366,12 +390,17 @@
                 font-size: 2rem;
             }
 
-            .board-grid {
-                grid-template-columns: 1fr;
-            }
-
             nav .logo-section img {
                 height: 80px;
+            }
+
+            .bio-photo img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .bio-content p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -394,42 +423,36 @@
     </nav>
 
     <div class="page-header">
-        <h1>Who We Are</h1>
-        <p>Meet the dedicated team leading Nebraska RARE's mission</p>
+        <h1>Kelsey Lahaie</h1>
+        <div class="title">Secretary</div>
+        <div class="email"><a href="mailto:kelsey@nebraska-rare.org">kelsey@nebraska-rare.org</a></div>
     </div>
 
-    <section>
+    <section class="bio-section">
         <div class="container">
-            <div class="mission-intro">
-                <h2>Our Mission</h2>
-                <p>Nebraska RARE is dedicated to empowering families impacted by rare diseases through education, advocacy, and community inclusion. We strive to elevate awareness, partner with healthcare providers and communities to ensure every person with a rare condition is understood, supported, and valued. Together, we build a compassionate network where all families feel seen, heard, and never alone.</p>
+            <div class="bio-header">
+                <div class="bio-photo">
+                    <img src="kelsey-lahaie.jpeg" alt="Kelsey Lahaie">
+                </div>
             </div>
 
-            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-navy);">Our Leadership Team</h2>
+            <div class="bio-content">
+                <p>Kelsey Lahaie serves as Secretary for Nebraska RARE, where she is committed to strengthening advocacy, awareness, and support for families impacted by rare diseases across the state.</p>
+                
+                <p>Her passion for rare disease advocacy is deeply personal. Kelsey's daughter, Molly, lives with Rett Syndrome, a rare neurological disorder. Through Molly's journey, Kelsey has experienced firsthand the challenges families face when navigating complex medical systems, therapies, and resources. This experience fuels her dedication to ensuring that families affected by rare conditions feel supported, informed, and never alone.</p>
+                
+                <p>Professionally, Kelsey brings over 15 years of experience in regulatory and compliance roles, along with a Master of Science in Psychology. Her background includes extensive work in licensing, regulatory oversight, and compliance management. She leverages this expertise to support the mission of Nebraska RARE by helping build strong organizational foundations and advocating for policies and systems that better serve the rare disease community.</p>
+                
+                <p>Kelsey believes that every family impacted by a rare condition deserves understanding, resources, and a compassionate network of support.</p>
+            </div>
 
-            <div class="board-grid">
-                <div class="board-member">
-                    <img src="paige-rivard.jpg" alt="Paige Rivard" class="member-photo">
-                    <h3>Paige Rivard</h3>
-                    <div class="title">President</div>
-                    <p>Leading Nebraska RARE's vision to empower families across the state.</p>
-                </div>
+            <div class="contact-box">
+                <h3>Contact Kelsey</h3>
+                <p><a href="mailto:kelsey@nebraska-rare.org">kelsey@nebraska-rare.org</a></p>
+            </div>
 
-                <div class="board-member">
-                    <img src="susan-samuelson.jpeg" alt="Susan Samuelson" class="member-photo">
-                    <h3>Susan Samuelson</h3>
-                    <div class="title">Vice President</div>
-                    <p>Supporting advocacy efforts and community engagement initiatives.</p>
-                </div>
-
-                <div class="board-member">
-                    <a href="kelsey-bio.html" style="text-decoration: none;">
-                        <img src="kelsey-lahaie.jpeg" alt="Kelsey Lahaie" class="member-photo" style="cursor: pointer; transition: transform 0.3s ease;">
-                    </a>
-                    <h3><a href="kelsey-bio.html" style="text-decoration: none; color: var(--primary-navy); transition: color 0.3s ease;">Kelsey Lahaie</a></h3>
-                    <div class="title">Secretary</div>
-                    <p style="margin-top: 0.5rem;"><a href="mailto:kelsey@nebraska-rare.org" style="color: var(--primary-red); text-decoration: none; font-weight: 600;">kelsey@nebraska-rare.org</a></p>
-                </div>
+            <div class="back-button">
+                <a href="who-we-are.html">← Back to Who We Are</a>
             </div>
         </div>
     </section>
