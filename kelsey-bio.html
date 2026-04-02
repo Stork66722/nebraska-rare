@@ -182,16 +182,14 @@
         }
 
         .bio-header {
-            display: flex;
-            gap: 3rem;
-            align-items: flex-start;
+            text-align: center;
             margin-bottom: 3rem;
             padding-bottom: 2rem;
             border-bottom: 3px solid var(--primary-red);
         }
 
         .bio-photo {
-            flex-shrink: 0;
+            margin: 0 auto 1.5rem;
         }
 
         .bio-photo img {
@@ -201,6 +199,39 @@
             object-fit: cover;
             border: 5px solid var(--accent-gold);
             box-shadow: 0 4px 12px rgba(0, 39, 67, 0.2);
+        }
+
+        .bio-name-title {
+            margin-top: 1.5rem;
+        }
+
+        .bio-name-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .bio-role {
+            font-size: 1.3rem;
+            color: var(--primary-red);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .bio-email-inline {
+            font-size: 1.1rem;
+        }
+
+        .bio-email-inline a {
+            color: var(--text-medium);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .bio-email-inline a:hover {
+            color: var(--primary-red);
+            border-bottom-color: var(--primary-red);
         }
 
         .bio-content {
@@ -356,12 +387,6 @@
             footer .footer-content {
                 grid-template-columns: 1fr;
             }
-
-            .bio-header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
         }
 
         @media (max-width: 768px) {
@@ -399,6 +424,14 @@
                 height: 150px;
             }
 
+            .bio-name-title h2 {
+                font-size: 2rem;
+            }
+
+            .bio-role {
+                font-size: 1.1rem;
+            }
+
             .bio-content p {
                 font-size: 1rem;
             }
@@ -422,17 +455,16 @@
         </div>
     </nav>
 
-    <div class="page-header">
-        <h1>Kelsey Lahaie</h1>
-        <div class="title">Secretary</div>
-        <div class="email"><a href="mailto:kelsey@nebraska-rare.org">kelsey@nebraska-rare.org</a></div>
-    </div>
-
     <section class="bio-section">
         <div class="container">
             <div class="bio-header">
                 <div class="bio-photo">
                     <img src="kelsey-lahaie.jpeg" alt="Kelsey Lahaie">
+                </div>
+                <div class="bio-name-title">
+                    <h2>Kelsey Lahaie</h2>
+                    <div class="bio-role">Secretary</div>
+                    <div class="bio-email-inline"><a href="mailto:kelsey@nebraska-rare.org">kelsey@nebraska-rare.org</a></div>
                 </div>
             </div>
 
