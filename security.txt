@@ -1,7 +1,7 @@
 Contact: mailto:richard@nebraska-rare.org
 Expires: 2027-12-31T23:59:59.000Z
 Preferred-Languages: en
-Canonical: https://nebraska-rare.org/.well-known/security.txt
+Canonical: https://nebraska-rare.org/security.txt
 
 # Security Policy
 
