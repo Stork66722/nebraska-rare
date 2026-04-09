@@ -1,0 +1,15 @@
+Contact: mailto:richard@nebraska-rare.org
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://nebraska-rare.org/.well-known/security.txt
+
+# Security Policy
+
+If you discover a security vulnerability on nebraska-rare.org, please report it responsibly to richard@nebraska-rare.org.
+
+We appreciate security researchers who:
+- Report issues privately before public disclosure
+- Provide detailed information to help us reproduce the issue
+- Allow reasonable time for us to address the issue
+
+Thank you for helping keep Nebraska RARE and our community safe.
