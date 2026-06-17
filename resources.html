@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Rare Disease Resources in Nebraska | Specialists, Support & Programs</title>
+    <title>Rare Disease Resources in Nebraska | Specialists, Support & Advocacy</title>
     <link rel="canonical" href="https://nebraska-rare.org/resources.html" />
-    <meta name="description" content="Find rare disease specialists at UNMC and Boys Town, access clinical trials, support programs, financial assistance, and patient advocacy resources across Nebraska.">
-    <meta name="keywords" content="rare disease specialist Nebraska, UNMC rare disease clinic, Boys Town genetics, rare disease support groups Omaha, Nebraska rare disease programs, clinical trials Nebraska, rare disease healthcare Nebraska">
+    <meta name="description" content="Find rare disease specialists at UNMC and Boys Town, access clinical trials, support programs, financial assistance, advocacy resources, and Medicaid information across Nebraska.">
+    <meta name="keywords" content="rare disease specialist Nebraska, UNMC rare disease clinic, Boys Town genetics, rare disease support Nebraska, Nebraska rare disease programs, rare disease advocacy Nebraska, DHHS Nebraska, Medicaid waiver Nebraska, DAC Nebraska, Olmstead Nebraska, rare disease healthcare Nebraska">
     <meta name="author" content="Nebraska RARE">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nebraska-rare.org/resources.html">
-    <meta property="og:title" content="Rare Disease Resources in Nebraska">
-    <meta property="og:description" content="Find specialists, support programs, and clinical trials for rare diseases in Nebraska">
+    <meta property="og:title" content="Rare Disease Resources in Nebraska | Nebraska RARE">
+    <meta property="og:description" content="Find specialists, support programs, advocacy resources, and Medicaid information for rare diseases in Nebraska">
     <meta property="og:site_name" content="Nebraska RARE">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="https://nebraska-rare.org/resources.html">
-    <meta name="twitter:title" content="Rare Disease Resources in Nebraska">
-    <meta name="twitter:description" content="Healthcare resources and support for Nebraska families affected by rare diseases">
+    <meta name="twitter:title" content="Rare Disease Resources in Nebraska | Nebraska RARE">
+    <meta name="twitter:description" content="Healthcare resources, advocacy tools, and support for Nebraska families affected by rare diseases">
     
     <!-- Google Analytics (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZJ1HD6PD2"></script>
@@ -216,13 +216,32 @@
             color: var(--primary-red);
         }
 
+        .resource-card.coming-soon {
+            border: 2px dashed var(--border);
+            background: var(--background-light);
+            opacity: 0.85;
+        }
+
+        .coming-soon-badge {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
         .resource-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             display: block;
         }
 
-         /* Footer */
+        /* Footer */
         footer {
             background: var(--primary-navy);
             color: white;
@@ -358,7 +377,7 @@
     <nav>
         <div class="container">
             <div class="logo-section">
-                <img src="logo.png" alt="Nebraska RARE Logo">
+                <img src="logo.png" alt="Nebraska RARE - Rare Disease Support and Advocacy">
             </div>
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
             <ul id="nav-menu">
@@ -373,15 +392,57 @@
 
     <div class="page-header">
         <h1>Resources</h1>
-        <p>Support, information, and connections for Nebraska families</p>
+        <p>Support, information, and connections for Nebraska families affected by rare diseases</p>
     </div>
 
     <section>
         <div class="container">
+
+            <!-- Nebraska Advocacy & Policy - NEW SECTION -->
+            <div class="resource-category">
+                <h2>🏛️ Nebraska Advocacy & Policy</h2>
+                <div class="resource-grid">
+
+                    <div class="resource-card coming-soon">
+                        <span class="resource-icon">📋</span>
+                        <div class="coming-soon-badge">Link Coming Soon</div>
+                        <h3>DHHS Advocacy & Learning</h3>
+                        <p>Nebraska Department of Health and Human Services advocacy opportunities, learning resources, and disability services information.</p>
+                        <a href="contact.html">Contact Us for Info →</a>
+                    </div>
+
+                    <div class="resource-card coming-soon">
+                        <span class="resource-icon">♿</span>
+                        <div class="coming-soon-badge">Link Coming Soon</div>
+                        <h3>DAC - Disability Advisory Committee</h3>
+                        <p>The Nebraska Disability Advisory Committee provides guidance on disability services policy and advocates for individuals with disabilities across the state.</p>
+                        <a href="contact.html">Contact Us for Info →</a>
+                    </div>
+
+                    <div class="resource-card coming-soon">
+                        <span class="resource-icon">💊</span>
+                        <div class="coming-soon-badge">Link Coming Soon</div>
+                        <h3>MAC - Medicaid Advisory Committee</h3>
+                        <p>The Nebraska Medicaid Advisory Committee provides input on Medicaid policy, including services critical to rare disease families across Nebraska.</p>
+                        <a href="contact.html">Contact Us for Info →</a>
+                    </div>
+
+                    <div class="resource-card coming-soon">
+                        <span class="resource-icon">⚖️</span>
+                        <div class="coming-soon-badge">Link Coming Soon</div>
+                        <h3>Olmstead Planning Committee</h3>
+                        <p>Nebraska's Olmstead Plan ensures people with disabilities can live, work, and participate in their communities. Attend meetings to have your voice heard.</p>
+                        <a href="contact.html">Contact Us for Info →</a>
+                    </div>
+
+                </div>
+            </div>
+
             <!-- Nebraska Healthcare Resources -->
             <div class="resource-category">
                 <h2>🏥 Nebraska Healthcare Resources</h2>
                 <div class="resource-grid">
+
                     <div class="resource-card">
                         <span class="resource-icon">🧬</span>
                         <h3>Boys Town Neurogenetics</h3>
@@ -402,6 +463,7 @@
                         <p>Leading pediatric hospital in Nebraska with specialty care for complex medical conditions.</p>
                         <a href="https://www.childrensomaha.org" target="_blank" rel="noopener">Visit Website →</a>
                     </div>
+
                 </div>
             </div>
 
@@ -409,6 +471,7 @@
             <div class="resource-category">
                 <h2>🤝 Partner Organizations</h2>
                 <div class="resource-grid">
+
                     <div class="resource-card">
                         <span class="resource-icon">♿</span>
                         <h3>The Arc Nebraska</h3>
@@ -436,6 +499,7 @@
                         <p>Developmental Disabilities Council advocating for policy and systems change in Nebraska.</p>
                         <a href="https://dhhs.ne.gov/DD%20Council" target="_blank" rel="noopener">Visit Website →</a>
                     </div>
+
                 </div>
             </div>
 
@@ -443,6 +507,7 @@
             <div class="resource-category">
                 <h2>🌎 National Rare Disease Resources</h2>
                 <div class="resource-grid">
+
                     <div class="resource-card">
                         <span class="resource-icon">🔬</span>
                         <h3>NORD (National Organization for Rare Disorders)</h3>
@@ -477,6 +542,7 @@
                         <p>Leading organization fighting Duchenne and Becker muscular dystrophy through research, advocacy, and support for affected families.</p>
                         <a href="https://www.parentprojectmd.org" target="_blank" rel="noopener">Visit Website →</a>
                     </div>
+
                 </div>
             </div>
 
@@ -484,11 +550,12 @@
             <div class="resource-category">
                 <h2>💰 Financial & Travel Support</h2>
                 <div class="resource-grid">
+
                     <div class="resource-card">
                         <span class="resource-icon">✈️</span>
                         <h3>CHAD (Children's Hospital Aid and Diagnosis)</h3>
                         <p>Provides travel assistance for families traveling to medical appointments in Nebraska.</p>
-                        <a href="#" onclick="alert('Contact info@nebraska-rare.org for CHAD information'); return false;">Contact Us for Info</a>
+                        <a href="contact.html">Contact Us for Info →</a>
                     </div>
 
                     <div class="resource-card">
@@ -504,15 +571,17 @@
                         <p>Housing for families with children receiving medical treatment away from home.</p>
                         <a href="https://www.rmhc.org" target="_blank" rel="noopener">Visit Website →</a>
                     </div>
+
                 </div>
             </div>
 
             <!-- Contact CTA -->
             <div style="background: linear-gradient(135deg, var(--primary-navy), #003d6b); color: white; padding: 3rem; border-radius: 12px; text-align: center; margin-top: 3rem;">
                 <h2 style="color: white; margin-bottom: 1rem;">Need Help Finding Resources?</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95;">We're here to help connect you with the support and information you need.</p>
-                <a href="contact.html" style="display: inline-block; background: var(--primary-red); color: white; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">Contact Us</a>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95;">We're here to help connect you with the support and information you need. Reach out anytime.</p>
+                <a href="contact.html" style="display: inline-block; background: var(--primary-red); color: white; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">Contact Us →</a>
             </div>
+
         </div>
     </section>
 
@@ -524,7 +593,7 @@
                     <div class="logo-footer">
                         <img src="logo.png" alt="Nebraska RARE Logo">
                     </div>
-                    <p>Empowering families impacted by rare diseases through education, advocacy, and community inclusion.</p>
+                    <p>Empowering families impacted by rare diseases through advocacy, community connection, and education.</p>
                 </div>
 
                 <div>
