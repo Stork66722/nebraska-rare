@@ -5,36 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Who We Are | Nebraska RARE Leadership Team & Mission</title>
-    <link rel="canonical" href="https://nebraska-rare.org/who-we-are.html" />
-    <meta name="description" content="Meet the leadership team behind Nebraska RARE's mission to empower families affected by rare diseases through advocacy, community connection, and education across Nebraska.">
-    <meta name="keywords" content="Nebraska RARE team, rare disease advocacy leadership, Nebraska rare disease board, nonprofit leadership Nebraska, rare disease families Nebraska, rare diagnosis support Nebraska">
+    <title>Paige Rivard - President | Nebraska RARE</title>
+    <link rel="canonical" href="https://nebraska-rare.org/paige-bio.html" />
+    <meta name="description" content="Meet Paige Rivard, President of Nebraska RARE. Rare disease caregiver, nonprofit executive, and advocate dedicated to empowering Nebraska families affected by rare diseases.">
+    <meta name="keywords" content="Paige Rivard, Nebraska RARE President, rare disease advocacy Nebraska, Prader-Willi Syndrome Nebraska, rare disease leadership Nebraska">
     <meta name="author" content="Nebraska RARE">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nebraska-rare.org/who-we-are.html">
-    <meta property="og:title" content="Who We Are | Nebraska RARE Leadership Team">
-    <meta property="og:description" content="Meet our leadership team dedicated to empowering families affected by rare diseases in Nebraska through advocacy, community connection, and education.">
+    <meta property="og:url" content="https://nebraska-rare.org/paige-bio.html">
+    <meta property="og:title" content="Paige Rivard - President | Nebraska RARE">
+    <meta property="og:description" content="Meet Paige Rivard, President of Nebraska RARE and dedicated rare disease advocate.">
     <meta property="og:site_name" content="Nebraska RARE">
+    <meta property="og:image" content="https://nebraska-rare.org/logo-square.png">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://nebraska-rare.org/who-we-are.html">
-    <meta name="twitter:title" content="Who We Are | Nebraska RARE">
-    <meta name="twitter:description" content="Meet our leadership team dedicated to rare disease advocacy in Nebraska">
+    <meta name="twitter:url" content="https://nebraska-rare.org/paige-bio.html">
+    <meta name="twitter:title" content="Paige Rivard - President | Nebraska RARE">
+    <meta name="twitter:description" content="President of Nebraska RARE and dedicated rare disease advocate.">
     <meta name="twitter:image" content="https://nebraska-rare.org/logo-square.png">
-
-    <!-- Social Sharing Image -->
-    <meta property="og:image" content="https://nebraska-rare.org/logo-square.png">
-
+    
     <!-- Google Analytics (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZJ1HD6PD2"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
     gtag('config', 'G-YZJ1HD6PD2');
     </script>
     
@@ -146,12 +143,29 @@
         .page-header h1 {
             font-size: 2.5rem;
             color: white;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
-        .page-header p {
+        .page-header .title {
+            font-size: 1.3rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header .email {
             font-size: 1.1rem;
             opacity: 0.95;
+        }
+
+        .page-header .email a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+            transition: border-color 0.3s ease;
+        }
+
+        .page-header .email a:hover {
+            border-bottom-color: white;
         }
 
         .container {
@@ -164,77 +178,122 @@
             padding: 4rem 0;
         }
 
-        .mission-intro {
-            text-align: center;
-            margin-bottom: 4rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+        .bio-section {
+            background: var(--background-light);
         }
 
-        .mission-intro h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+        .bio-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-red);
+        }
+
+        .bio-photo {
+            margin: 0 auto 1.5rem;
+        }
+
+        .bio-photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--accent-gold);
+            box-shadow: 0 4px 12px rgba(0, 39, 67, 0.2);
+        }
+
+        .bio-name-title {
+            margin-top: 1.5rem;
+        }
+
+        .bio-name-title h2 {
+            font-size: 2.5rem;
             color: var(--primary-navy);
+            margin-bottom: 0.5rem;
         }
 
-        .mission-intro p {
+        .bio-role {
+            font-size: 1.3rem;
+            color: var(--primary-red);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .bio-email-inline {
             font-size: 1.1rem;
-            line-height: 1.8;
+        }
+
+        .bio-email-inline a {
             color: var(--text-medium);
-        }
-
-        .board-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .board-member {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid var(--border);
-            text-align: center;
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
             transition: all 0.3s ease;
         }
 
-        .board-member:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 39, 67, 0.1);
-            border-color: var(--primary-red);
-        }
-
-        .board-member h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-navy);
-        }
-
-        .board-member .title {
+        .bio-email-inline a:hover {
             color: var(--primary-red);
+            border-bottom-color: var(--primary-red);
+        }
+
+        .bio-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .bio-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-box {
+            background: white;
+            border: 2px solid var(--primary-red);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-box a {
+            color: var(--primary-red);
+            text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            transition: opacity 0.3s ease;
         }
 
-        .board-member p {
-            color: var(--text-medium);
-            line-height: 1.6;
+        .contact-box a:hover {
+            opacity: 0.8;
         }
 
-        .member-photo {
-            width: 100px; 
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            border: 3px solid #D4A556; 
-            box-shadow: 0 4px 8px rgba(0, 39, 67, 0.2); 
+        .back-button {
+            text-align: center;
+            margin-top: 3rem;
         }
 
-        /* Footer */
+        .back-button a {
+            display: inline-block;
+            background: var(--primary-navy);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button a:hover {
+            background: var(--primary-red);
+        }
+
         footer {
             background: var(--primary-navy);
             color: white;
@@ -356,12 +415,25 @@
                 font-size: 2rem;
             }
 
-            .board-grid {
-                grid-template-columns: 1fr;
-            }
-
             nav .logo-section img {
                 height: 80px;
+            }
+
+            .bio-photo img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .bio-name-title h2 {
+                font-size: 2rem;
+            }
+
+            .bio-role {
+                font-size: 1.1rem;
+            }
+
+            .bio-content p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -384,48 +456,47 @@
     </nav>
 
     <div class="page-header">
-        <h1>Who We Are</h1>
-        <p>Meet the dedicated team leading Nebraska RARE's mission</p>
+        <h1>Paige Rivard</h1>
+        <div class="title">President</div>
+        <div class="email"><a href="mailto:paige@nebraska-rare.org">paige@nebraska-rare.org</a></div>
     </div>
 
-    <section>
+    <section class="bio-section">
         <div class="container">
-            <div class="mission-intro">
-                <h2>Our Mission</h2>
-                <p>Nebraska RARE is dedicated to empowering families impacted by rare disease through advocacy, community connections, and education. We strive to increase awareness, partner with healthcare organizations and providers, and communities to ensure every person with a rare diagnosis is understood, supported, and valued.</p>
+            <div class="bio-header">
+                <div class="bio-photo">
+                    <img src="paige-rivard.jpg" alt="Paige Rivard - President, Nebraska RARE">
+                </div>
+                <div class="bio-name-title">
+                    <h2>Paige Rivard</h2>
+                    <div class="bio-role">President</div>
+                    <div class="bio-email-inline"><a href="mailto:paige@nebraska-rare.org">paige@nebraska-rare.org</a></div>
+                </div>
             </div>
 
-            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-navy);">Our Leadership Team</h2>
+            <div class="bio-content">
+                <p>Paige brings a unique blend of executive leadership, strategic vision, and rare disease experience to drive innovation at the intersection of healthcare, advocacy, and community engagement. With over two decades of experience in both corporate and nonprofit sectors, she is positioned to lead the mission of Nebraska RARE — especially in accelerating rare disease innovation that benefits patients, families, and the broader Nebraska community.</p>
 
-                <div class="board-member">
-                    <img src="paige-rivard.jpg" alt="Paige Rivard" class="member-photo">
-                    <h3>Paige Rivard</h3>
-                    <div class="title">President</div>
-                    <p>Leading Nebraska RARE's vision to empower families across the state.</p>
-                    <p style="margin-top: 1rem;">
-                        <a href="paige-bio.html" style="color: var(--primary-red); text-decoration: none; font-weight: 600;">Click for bio →</a>
-                    </p>
-                </div>
+                <p>Her lived experience as a rare disease caregiver to her son, Jake, living with two rare genetic disorders, grounds her work in empathy, purpose, and action. She understands firsthand the gaps in the current care and innovation pipeline and works to close them through advocacy, storytelling, and systems-level change.</p>
 
-                <div class="board-member">
-                    <img src="susan-samuelson.jpeg" alt="Susan Samuelson - Vice President, Nebraska RARE" class="member-photo">
-                    <h3>Susan Samuelson</h3>
-                    <div class="title">Vice President</div>
-                    <p>Supporting advocacy efforts and community engagement initiatives.</p>
-                </div>
+                <p>In addition to her leadership in rare disease communities, including CEO of the National Prader-Willi Syndrome Association, Paige brings a strong business foundation in enterprise relationship management from prior roles with JP Morgan Chase and TSYS Merchant Solutions/First National Bank. She currently consults with pharmaceutical companies in the rare disease space and serves as Head of Social Impact for BlueOakNx. Her business acumen, grounded in an MBA in Healthcare from Creighton University, equips her to navigate complex funding models, regulatory environments, and industry partnerships.</p>
 
-                <div class="board-member">
-                    <img src="kelsey-lahaie.jpeg" alt="Kelsey Lahaie - Secretary, Nebraska RARE" class="member-photo">
-                    <h3>Kelsey Lahaie</h3>
-                    <div class="title">Secretary</div>
-                    <p>Ensuring organizational excellence and coordinating outreach efforts.</p>
-                    <p style="margin-top: 1rem;"><a href="kelsey-bio.html" style="color: var(--primary-red); text-decoration: none; font-weight: 600;">Click for bio →</a></p>
-                </div>
+                <p>Paige also serves as a board member for several organizations, including the Munroe-Meyer Institute, the American Red Cross, and Raregivers.™ She actively supports efforts to integrate innovation into clinical care, family support services, and community-based programming.</p>
+
+                <p>With her deep ties to the Omaha community, strategic insight, and proven leadership in rare disease innovation, Paige is passionate about research, policy, business, and patient voice in the rare disease space — especially for underserved rare disease populations — and is excited to serve Nebraska families.</p>
+            </div>
+
+            <div class="contact-box">
+                <h3>Contact Paige</h3>
+                <p><a href="mailto:paige@nebraska-rare.org">paige@nebraska-rare.org</a></p>
+            </div>
+
+            <div class="back-button">
+                <a href="who-we-are.html">← Back to Who We Are</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
