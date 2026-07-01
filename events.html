@@ -245,6 +245,88 @@
             transform: translateY(-2px);
         }
 
+        /* Section jump tabs */
+        .section-tabs {
+            background: var(--background-light);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+        }
+
+        .section-tabs .container {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .section-tab {
+            display: inline-block;
+            background: white;
+            border: 2px solid var(--primary-navy);
+            color: var(--primary-navy);
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .section-tab:hover {
+            background: var(--primary-navy);
+            color: white;
+        }
+
+        /* Section headers within page */
+        .section-heading {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .section-heading h2 {
+            font-size: 2rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-heading p {
+            color: var(--text-medium);
+            font-size: 1.05rem;
+        }
+
+        /* Community events (external orgs) card variant */
+        .community-event-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-left: 5px solid var(--accent-gold);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .community-event-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 39, 67, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .community-event-card .event-date {
+            background: var(--accent-gold);
+        }
+
+        .community-badge {
+            display: inline-block;
+            background: var(--background-light);
+            color: var(--text-medium);
+            border: 1px solid var(--border);
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
         /* Footer */
         footer {
             background: var(--primary-navy);
@@ -375,6 +457,17 @@
                 flex-direction: column;
                 gap: 0.5rem;
             }
+
+            .section-tabs .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-tab {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -400,8 +493,20 @@
         <p>Join us for advocacy, education, and community gatherings across Nebraska</p>
     </div>
 
-    <section>
+    <div class="section-tabs">
         <div class="container">
+            <a href="#our-events" class="section-tab">📍 Nebraska RARE Events</a>
+            <a href="#community-events" class="section-tab">🤝 Rare Community Events</a>
+        </div>
+    </div>
+
+    <section id="our-events">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Nebraska RARE Events</h2>
+                <p>Our advocacy activities, education initiatives, and policy victories</p>
+            </div>
 
             <!-- VICTORY ANNOUNCEMENT -->
             <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 2.5rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 6px 16px rgba(40,167,69,0.3);">
@@ -499,6 +604,50 @@
             <div style="background: var(--background-light); padding: 2rem; border-radius: 8px; text-align: center; margin-top: 2rem;">
                 <p style="color: var(--text-medium); margin: 0;">
                     <strong>Stay Connected:</strong> More events will be announced soon. <a href="contact.html" style="color: var(--primary-red); text-decoration: none; font-weight: 600;">Contact us</a> to get involved!
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RARE COMMUNITY EVENTS -->
+    <section id="community-events" style="background: var(--background-light);">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Rare Community Events</h2>
+                <p>Amplifying events and initiatives from other organizations supporting the rare disease community</p>
+            </div>
+
+            <div style="background: white; border: 2px solid var(--border); border-left: 5px solid var(--accent-gold); padding: 1.75rem; border-radius: 8px; margin-bottom: 2rem;">
+                <p style="color: var(--text-medium); line-height: 1.7; margin: 0;">As a growing organization, we're not yet able to financially sponsor outside events — but we're glad to help spread the word! Below are events hosted by other organizations serving Nebraska's rare disease and disability community. <strong>Know of an event we should feature?</strong> <a href="contact.html" style="color: var(--primary-red); text-decoration: none; font-weight: 600;">Let us know</a>.</p>
+            </div>
+
+            <!-- HDSA Omaha Affiliate - Team Hope Walk -->
+            <div class="community-event-card">
+                <div class="event-date">📅 August 30, 2026</div>
+                <h3>Team Hope Walk<span class="community-badge">Hosted by HDSA Omaha Affiliate</span></h3>
+                <div class="event-details">
+                    <div class="event-detail">
+                        <strong>Hosted by:</strong> Huntington's Disease Society of America (HDSA) Omaha Affiliate
+                    </div>
+                    <div class="event-detail">
+                        <strong>Date:</strong> Sunday, August 30, 2026
+                    </div>
+                    <div class="event-detail">
+                        <strong>Time:</strong> Check-in 8:00 AM · Walk 9:00 AM
+                    </div>
+                    <div class="event-detail">
+                        <strong>Location:</strong> Omaha, NE (details TBA)
+                    </div>
+                </div>
+                <p>The Team Hope Walk brings together families, caregivers, advocates, healthcare professionals, and community supporters to raise awareness and support for individuals and families affected by Huntington's Disease — a progressive, inherited neurological disorder with no cure. Funds raised support local support groups, educational programs, advocacy efforts, and research toward better treatments.</p>
+                <a href="https://give.hdsa.org/event/2026-team-hope-walk-omaha/e723903" target="_blank" rel="noopener" class="event-link" style="background: var(--accent-gold);">Learn More & Register →</a>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 8px; text-align: center; margin-top: 1rem; border: 2px dashed var(--border);">
+                <p style="color: var(--text-medium); margin: 0;">
+                    More community events will be added here as they're shared with us.
                 </p>
             </div>
 
