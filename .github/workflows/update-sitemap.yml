@@ -1,0 +1,57 @@
+name: Update Sitemap
+
+# Only triggers on pushes that touch .html files. The commit this workflow
+# makes only touches sitemap.xml, so it never re-triggers itself.
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+
+permissions:
+  contents: write
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # need previous commit to diff against
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Get changed html files
+        id: changed
+        run: |
+          BEFORE="${{ github.event.before }}"
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            # Fallback for first push / edge cases: just diff the last commit
+            FILES=$(git diff --name-only HEAD~1 HEAD -- '*.html' || true)
+          else
+            FILES=$(git diff --name-only "$BEFORE" "${{ github.sha }}" -- '*.html' || true)
+          fi
+          echo "Changed html files:"
+          echo "$FILES"
+          # Save as space-separated list for the next step
+          echo "files=$(echo $FILES | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+
+      - name: Update sitemap.xml
+        if: steps.changed.outputs.files != ''
+        run: python3 scripts/update_sitemap.py ${{ steps.changed.outputs.files }}
+
+      - name: Commit and push if sitemap changed
+        run: |
+          if git diff --quiet -- sitemap.xml; then
+            echo "sitemap.xml unchanged, nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git commit -m "chore: auto-update sitemap lastmod dates"
+          git push
