@@ -2,7 +2,7 @@
 
 Official website for Nebraska RARE - empowering families affected by rare diseases through education, advocacy, and community inclusion.
 
-🌐 **Live Site:** [nebraska-rare.org](https://nebraska-rare.org) *(coming soon)*
+🌐 **Live Site:** [nebraska-rare.org](https://nebraska-rare.org)
 
 ---
 
@@ -20,11 +20,25 @@ This is a simple, static website built with HTML and CSS:
 
 ```
 nebraska-rare/
-├── index.html          # Mission statement homepage
-├── who-we-are.html     # Board members page
-├── contact.html        # Contact form
-├── logo.png            # Nebraska RARE logo
-└── README.md           # This file
+├── index.html              # Homepage (rotating hero carousel)
+├── who-we-are.html         # Board members page, links to bio pages
+├── kelsey-bio.html         # Kelsey Lahaie bio
+├── paige-bio.html          # Paige Rivard bio
+├── susan-bio.html          # Susan Samuelson bio
+├── events.html             # Events + policy victories
+├── resources.html          # Resource library
+├── contact.html            # Contact form (Formspree)
+├── 404.html                # Custom 404 page
+├── logo-square.png         # Social share image (og:image / twitter:image — absolute URL, keep in root)
+├── favicon.ico, favicon-*.png, apple-touch-icon.png  # Site icons (root, browser/convention paths)
+├── CNAME, robots.txt, sitemap.xml, security.txt      # Site/SEO config (must stay in root)
+├── images/
+│   ├── logo.png            # Nebraska RARE logo (site-wide nav/footer)
+│   ├── people/              # Board headshots + homepage hero photos
+│   └── partner-logos/        # Third-party org logos used on resources.html
+├── scripts/update_sitemap.py        # Sitemap lastmod updater
+├── .github/workflows/update-sitemap.yml  # Runs the script on every HTML push
+└── README.md               # This file
 ```
 
 ---
@@ -51,15 +65,15 @@ No build process or dependencies required!
 
 ### GitHub Pages (Current)
 
-This site is deployed via GitHub Pages:
+This site is deployed via GitHub Pages, serving the custom domain:
 
 1. Push changes to `main` branch
-2. Site automatically updates at `https://YOUR-USERNAME.github.io/nebraska-rare/`
-3. Custom domain configured via DNS settings
+2. Site automatically redeploys at `https://nebraska-rare.org` (usually live within a minute or two)
+3. `scripts/update_sitemap.py` runs automatically on every HTML push (see `.github/workflows/update-sitemap.yml`) to bump `<lastmod>` dates in `sitemap.xml`
 
-### Custom Domain Setup
+### Custom Domain Setup (already configured)
 
-DNS A Records pointing to GitHub Pages:
+The `CNAME` file in the repo root points GitHub Pages at `nebraska-rare.org`. DNS is managed at Porkbun with A records pointing to GitHub Pages:
 ```
 185.199.108.153
 185.199.109.153
@@ -67,21 +81,14 @@ DNS A Records pointing to GitHub Pages:
 185.199.111.153
 ```
 
-CNAME: `www` → `YOUR-USERNAME.github.io`
-
 ---
 
 ## Contact Form
 
-The contact form uses [Formspree](https://formspree.io/) for form handling.
-
-**To activate:**
-1. Sign up at formspree.io (free)
-2. Create a new form
-3. Update `contact.html` with your Formspree endpoint:
-   ```html
-   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-   ```
+The contact form uses [Formspree](https://formspree.io/) for form handling (already configured, form ID `xdaanbge`, with Formshield spam protection enabled instead of a CAPTCHA). No setup needed — if the endpoint ever needs to change, update `contact.html`:
+```html
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+```
 
 ---
 
@@ -106,7 +113,7 @@ The contact form uses [Formspree](https://formspree.io/) for form handling.
 
 ## Contributing
 
-Nebraska RARE is working toward 501(c)(3) nonprofit status. This website is maintained by the board of directors.
+Nebraska RARE is a 501(c)(3) tax-exempt nonprofit organization (EIN 42-4109468). This website is maintained by the board of directors.
 
 For suggestions or corrections, please contact us via the website contact form.
 
@@ -120,11 +127,11 @@ For suggestions or corrections, please contact us via the website contact form.
 
 ## Contact
 
-**Email:** contact@nebraska-rare.org  
+**Email:** info@nebraska-rare.org  
 **Website:** [nebraska-rare.org](https://nebraska-rare.org)
 
 ---
 
 ## Acknowledgments
 
-Built with care for the Nebraska rare disease community. 
+Built with care for the Nebraska rare disease community.
